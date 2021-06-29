@@ -186,7 +186,12 @@ const RoomLinkButton = ({ link }) => {
   const { t } = useTranslation();
   const [copiedLinkToClipboard, setCopiedLinkToClipboard] = useState(false);
 
+  const shareMobile = () => {
+  	navigator.share({url: link});
+  };
+
   return (
+    <div>
     <CopyToClipboard
       text={link}
       onCopy={() => {
@@ -200,5 +205,7 @@ const RoomLinkButton = ({ link }) => {
         {copiedLinkToClipboard ? t("playerId:copied") : t("playerId:copy-link")}
       </Button>
     </CopyToClipboard>
+    <Button onClick={shareMobile}>Share</Button>
+    </div>
   );
 };
