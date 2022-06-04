@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next-translate && next dev",
+    "dev": "next-translate && next dev -H 127.0.0.1 -p 13555",
     "build": "next-translate && next build",
-    "start": "next start",
+    "start": "next start -H 127.0.0.1 -p 13555",
     "test": "jest"
   },
   "keywords": [],
@@ -16,7 +16,7 @@
     "@sentry/browser": "^5.16.1",
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
-    "firebase": "^7.14.2",
+    "firebase": "^8.5.0",
     "next": "^9.3.6",
     "next-translate": "^0.17.1",
     "react": "^16.13.1",
